@@ -1,0 +1,223 @@
+/*
+Theme Name: ChildTheme
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+
+/* color variables */
+:root{
+	--primary: #446084;
+}
+
+/* font sizing and new classes */
+.display-1 {
+    font-size: 4.5em
+}
+
+.display-2 {
+    font-size: 3.5em
+}
+
+.display-3 {
+    font-size: 3em
+}
+
+.display-4{
+	font-size: 2.7em;
+}
+
+.display-1, .display-2, .display-3 {
+    padding: 0;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+
+.banner .res-text{
+	font-size: 100% !important;
+}
+
+h1{
+	font-size: 2.5em;
+}
+
+h2{
+	font-size: 2.1em;
+}
+
+h3{
+	font-size: 1.7em;
+}
+
+h4{
+	font-size: 1.4em;
+}
+
+h5{
+	font-size: 1.2em;
+}
+
+h6{
+	font-size: 1em;
+}
+
+p.lead{
+	font-size: 1.2em
+}
+
+.small{
+	font-size: .9em
+}
+
+/* Google Maps */
+/* adjust padding to change the height of maps */
+
+.google-maps {
+  position: relative;
+  padding-bottom: 64%;
+  height: 0;
+  width:  100%;
+  overflow: hidden;
+}
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+/*change color of checkmarks from flatsome's green */
+.dark ul li.bullet-checkmark:before, .dark ul li.bullet-arrow:before, .dark ul li.bullet-star:before{
+	color: white;
+}
+
+/* change the color of bullets. Set your colors at the top */
+ul li.bullet-checkmark:before, ul li.bullet-arrow:before, ul li.bullet-star:before{
+	color: var(--primary);
+}
+
+/* gravity forms */
+
+.gform_wrapper legend{
+    text-transform: none !important; 	
+}
+
+.gform_wrapper label{
+    color: inherit;
+}
+
+.gform_wrapper .ginput_complex label{
+	font-size: .8em !important;
+}
+
+.full-width .gform_button.button{
+    width: 100%
+}
+
+.gform_wrapper.gravity-theme .gfield-choice-input{
+	margin-bottom: 0;
+}
+
+.gform_wrapper .gfield_required{
+	color: var(--primary) !important;
+}
+
+/*.gform_button.button{
+	border-radius: 10px;
+}*/
+
+/* horizontal forms */
+.gform_wrapper .gf_simple_horizontal .gform_body{
+	width: 100%;
+	max-width: unset;
+}
+
+.gform_wrapper .gf_simple_horizontal .gform_button.button{
+	margin: 0;
+}
+
+/* align buttons at bottom of row (must be set to equal) */
+.align-buttons .button{
+	margin-top: auto;
+}
+
+.align-buttons .col-inner{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.align-buttons .text-center.col-inner{
+	align-items: center;
+}
+
+.align-buttons .col-inner div{
+	width: 100%;
+}
+
+/* fix weird spacing on buttons */
+.button span {
+    padding-top: 5px;
+}
+
+/* horizontally align icons */
+
+.align-icons{
+    align-items: center;
+}
+
+
+/* fill image height */
+
+.fill img, .fill .img-inner{
+	height: 100%;
+}
+
+.fill img{
+	object-fit: cover;
+}
+
+.show-radius .col-inner{
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 48em) {
+/*************** ADD MOBILE ONLY CSS HERE  ***************/
+    
+    /* mobile for display sizes */
+    .display-1 {
+		font-size: 3em;
+	}
+
+	.display-2 {
+		font-size: 2.5em;
+	}
+
+	.display-3 {
+		font-size: 2.3em;
+	}
+
+	.display-4{
+		font-size: 2em;
+	}
+}
+
+/* limit size of containers on mobile */
+@media only screen and (max-width: 1200px){
+	.container-width, .full-width .ubermenu-nav, .container:not(.banner-layers), .row:not(.row-collapse){
+		width: calc(100% - 30px);
+	}
+}
+
+/* fix alignment on absolute footer */
+@media (min-width: 850px){
+	.footer-secondary{
+		padding: 0px !important;
+	}
+}
